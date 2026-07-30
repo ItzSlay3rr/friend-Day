@@ -1,0 +1,808 @@
+/* =========================================
+   FOR HASHMEEN ❤️
+   Premium Girlfriend Day Website
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #140018,
+        #2b0037,
+        #4b005d,
+        #18001d
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 18s ease infinite;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* Floating Hearts Background */
+
+.hearts{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.hearts::before{
+
+content:"💖 💗 💕 💞 💓";
+
+position:absolute;
+
+font-size:28px;
+
+opacity:.12;
+
+letter-spacing:90px;
+
+width:200%;
+
+animation:floatHearts 28s linear infinite;
+
+}
+
+@keyframes floatHearts{
+
+0%{
+
+transform:translateY(110vh);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+/* Sparkle Background */
+
+.stars{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(#ffffff55 1px, transparent 1px);
+
+background-size:40px 40px;
+
+opacity:.25;
+
+z-index:-2;
+
+}
+
+/* Loader */
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+background:#140018;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.loader-heart{
+
+font-size:65px;
+
+animation:heartbeat 1.2s infinite;
+
+filter:drop-shadow(0 0 20px hotpink);
+
+}
+
+@keyframes heartbeat{
+
+0%{transform:scale(1);}
+
+25%{transform:scale(1.15);}
+
+40%{transform:scale(.95);}
+
+70%{transform:scale(1.18);}
+
+100%{transform:scale(1);}
+
+}
+
+#loader h2{
+
+margin-top:25px;
+
+font-weight:400;
+
+color:#ffd5e8;
+
+letter-spacing:1px;
+
+}
+
+/* Sections */
+
+section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+/* Notification */
+
+.notification-card{
+
+width:380px;
+
+max-width:95%;
+
+padding:28px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:
+
+0 0 35px rgba(255,80,170,.35);
+
+transition:.4s;
+
+}
+
+.notification-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 0 60px rgba(255,80,170,.6);
+
+}
+
+.notification-header{
+
+display:flex;
+
+justify-content:space-between;
+
+font-size:14px;
+
+opacity:.8;
+
+margin-bottom:20px;
+
+}
+
+.notification-body h2{
+
+font-size:30px;
+
+font-family:'Dancing Script',cursive;
+
+margin-bottom:10px;
+
+color:#ffd6ef;
+
+}
+
+.notification-body p{
+
+opacity:.9;
+
+margin-bottom:25px;
+
+line-height:1.7;
+
+}
+
+/* Buttons */
+
+button{
+
+padding:16px 38px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+background:linear-gradient(
+45deg,
+#ff4da6,
+#ff87c7
+);
+
+color:white;
+
+transition:.35s;
+
+box-shadow:
+
+0 0 25px rgba(255,90,170,.55);
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 50px hotpink;
+
+}
+
+/* Hero */
+
+#hero{
+
+text-align:center;
+
+flex-direction:column;
+
+}
+
+#hero h1{
+
+font-size:78px;
+
+font-family:'Dancing Script',cursive;
+
+color:#ffe3f3;
+
+text-shadow:
+
+0 0 18px #ff5da8,
+
+0 0 45px hotpink;
+
+margin-bottom:25px;
+
+}
+
+#hero p{
+
+font-size:22px;
+
+max-width:700px;
+
+line-height:1.9;
+
+opacity:.92;
+
+margin-bottom:45px;
+
+}
+
+/* Glass Cards */
+
+.letter-card,
+.ending-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(22px);
+
+padding:45px;
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 0 40px rgba(255,80,170,.28);
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff5ea8;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#230028;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+#hero h1{
+
+font-size:52px;
+
+}
+
+#hero p{
+
+font-size:18px;
+
+}
+
+.notification-card{
+
+padding:22px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
+/* ==================================================
+   PART 2B
+   Gallery • Letter • Ending
+================================================== */
+
+/* ---------- GALLERY ---------- */
+
+#gallery{
+    flex-direction:column;
+    text-align:center;
+    padding:100px 20px;
+}
+
+#gallery h2{
+    font-family:'Dancing Script',cursive;
+    font-size:60px;
+    color:#ffe5f4;
+    margin-bottom:60px;
+    text-shadow:0 0 20px #ff5ca9;
+}
+
+.photo-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:35px;
+
+    width:min(1200px,100%);
+
+    margin:auto;
+
+}
+
+.photo-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:28px;
+
+    padding:14px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 0 25px rgba(255,90,170,.25);
+
+    transition:.45s;
+
+    transform:rotate(-2deg);
+
+}
+
+.photo-card:nth-child(even){
+
+    transform:rotate(2deg);
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-12px) scale(1.04) rotate(0deg);
+
+    box-shadow:
+    0 0 40px rgba(255,90,170,.55);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+.photo-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+#letterBtn{
+
+    margin-top:70px;
+
+}
+
+/* ---------- LETTER ---------- */
+
+#letter{
+
+    padding:120px 20px;
+
+}
+
+.letter-card{
+
+    width:min(900px,100%);
+
+    text-align:left;
+
+    position:relative;
+
+}
+
+.letter-card::before{
+
+    content:"💌";
+
+    position:absolute;
+
+    top:-25px;
+
+    right:30px;
+
+    font-size:42px;
+
+}
+
+.letter-card h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:54px;
+
+    color:#ffe6f3;
+
+    margin-bottom:35px;
+
+}
+
+#typing{
+
+    font-size:21px;
+
+    line-height:2;
+
+    color:#fff8fc;
+
+    white-space:pre-wrap;
+
+    min-height:320px;
+
+}
+
+#typing::after{
+
+    content:"|";
+
+    color:#ff66b8;
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+/* ---------- ENDING ---------- */
+
+#ending{
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.ending-card{
+
+    width:min(850px,100%);
+
+}
+
+.ending-card h1{
+
+    font-size:70px;
+
+    font-family:'Dancing Script',cursive;
+
+    color:#fff0f8;
+
+    margin-bottom:30px;
+
+    text-shadow:
+
+    0 0 20px #ff66b8,
+
+    0 0 50px hotpink;
+
+}
+
+.ending-card p{
+
+    font-size:22px;
+
+    line-height:2;
+
+    margin-bottom:35px;
+
+    color:#ffe6f3;
+
+}
+
+.ending-card h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:48px;
+
+    color:#ffb5d9;
+
+}
+
+/* ---------- Floating Glow ---------- */
+
+.photo-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    rgba(255,255,255,.15),
+
+    transparent,
+
+    rgba(255,255,255,.08)
+
+    );
+
+    pointer-events:none;
+
+}
+
+/* ---------- Entrance Animation ---------- */
+
+.photo-card{
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+.photo-card:nth-child(2){
+
+animation-delay:.4s;
+
+}
+
+.photo-card:nth-child(3){
+
+animation-delay:.8s;
+
+}
+
+.photo-card:nth-child(4){
+
+animation-delay:1.2s;
+
+}
+
+.photo-card:nth-child(5){
+
+animation-delay:1.6s;
+
+}
+
+.photo-card:nth-child(6){
+
+animation-delay:2s;
+
+}
+
+@keyframes floatCard{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+#gallery h2{
+
+font-size:42px;
+
+}
+
+.photo-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.photo-card img{
+
+height:360px;
+
+}
+
+.letter-card h2{
+
+font-size:42px;
+
+}
+
+#typing{
+
+font-size:18px;
+
+}
+
+.ending-card h1{
+
+font-size:52px;
+
+}
+
+.ending-card h2{
+
+font-size:38px;
+
+}
+
+}
