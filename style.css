@@ -819,3 +819,38 @@ opacity:1;
 }
 
 }
+#nextBtn{
+
+display:none;
+
+margin:40px auto 0;
+
+padding:18px 45px;
+
+background:linear-gradient(45deg,#ff4da6,#ff8fcf);
+
+border:none;
+
+border-radius:50px;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:0 0 30px rgba(255,80,170,.5);
+
+transition:.35s;
+
+}
+
+#nextBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 45px hotpink;
+
+}
