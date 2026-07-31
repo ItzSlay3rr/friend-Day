@@ -482,3 +482,12 @@ loveNote.style.color="white";
 loveNote.style.pointerEvents="none";
 
 document.body.appendChild(loveNote);
+/* -----------------------------
+Next Surprise Button
+------------------------------*/
+
+document.getElementById("nextBtn").addEventListener("click",()=>{
+
+    showEnding();
+
+});
