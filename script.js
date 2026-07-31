@@ -211,16 +211,11 @@ index++;
 
 if(index>=words.length){
 
-clearInterval(interval);
+    clearInterval(interval);
 
-setTimeout(()=>{
-
-showEnding();
-
-},2500);
+    document.getElementById("nextBtn").style.display = "inline-block";
 
 }
-
 },140);
 
 }
